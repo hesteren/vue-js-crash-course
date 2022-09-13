@@ -1,6 +1,6 @@
 <template>
     <!-- inside [] if true, add reminder class else '', also want task class always = Conditional (ternary) operator -->
-    <div :class="[task.reminder ? 'reminder' : '', 'task']">
+    <div @dblclick="$emit('toggle-reminder', task.id)" :class="[task.reminder ? 'reminder' : '', 'task']">
         <h3> {{task.text}} <i @click="onDelete(task.id)" class="fas fa-times"> </i></h3>
         <p> {{task.day}} </p>
     </div>
