@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Header title="Task Tracker"></Header>
+    <Tasks :tasks="tasks"></Tasks>
   </div>
 </template>
 
@@ -10,8 +11,7 @@
 
 <script>
 import Header from './components/Header.vue';
-
-
+import Tasks from './components/Tasks.vue';
 
 
 
@@ -20,8 +20,9 @@ import Header from './components/Header.vue';
 export default {
   name: 'App',
   components: {
-    Header
-  },
+    Header,
+    Tasks
+},
   data() {
     return {
       tasks: []
