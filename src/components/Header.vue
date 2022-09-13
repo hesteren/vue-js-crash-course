@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1>{{ title }}</h1>
-        <Button @click="onClick()" text="Add Task" color="green"></Button>
+        <Button @toggle-add-task="$emit('toggle-add-task')" text="Add Task" color="green"></Button>
         <!-- <Button text="Update Task" color="blue"></Button>
         <Button text="Delete Task" color="red"></Button> -->
     </header>
@@ -22,11 +22,6 @@ export default {
         title: {
             type: String,
             default: "Hello World"
-        }
-    },
-    methods: {
-        onClick() {
-            console.log("Clicked!")
         }
     }
 }
